@@ -44,5 +44,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ghcr.io/prabhath0777/iris-flower-classification:latest
